@@ -1,4 +1,4 @@
 <?php
 echo "Inaccessible to the public";
 
-header('location: /public/');
+header('location: public/');
