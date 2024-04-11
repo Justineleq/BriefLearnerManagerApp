@@ -6,13 +6,13 @@ $method = $_SERVER['REQUEST_METHOD'];
 
 require_once __DIR__ . '/../config.php';
 
-// $homeController = new HomeController();
+$homeController = new HomeController();
 
 switch ($route) {
-    case HOME_URL . '/homepage':
+    case HOME_URL . 'homepage':
       if ($method == 'GET') {
         echo ('HOMEPAGE');
-        // $homeController->homepage();
+        $homeController->homepage();
       } else if ($method == 'POST') {
         
         

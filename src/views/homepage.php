@@ -1,6 +1,6 @@
 <?php
 include __DIR__ . '/includes/navbar.php';
-
+echo 'homepage';
 
 ?>
 <!DOCTYPE html>
