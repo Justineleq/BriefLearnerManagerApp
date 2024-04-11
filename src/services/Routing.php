@@ -1,6 +1,6 @@
-<?php
+<!-- <?php
 
-namespace src\Services;
+namespace src\services;
 
 final class Routing
 {
@@ -15,4 +15,4 @@ final class Routing
     }
     return $routeComposee;
   }
-}
+} -->

@@ -1,21 +1,26 @@
 <?php
 
-// Load classes and repositories on demand :
-function ChargerClasses($class)
+function classLoader($className)
 {
-  try {
-    if(str_contains($class, "src")){
-      $class = str_replace('src', '', $class);
-      $class = str_replace('\\', '/', $class);
-      require_once __DIR__. $class . ".php";
+    $filePathClass = $className . '.php';
+
+
+    $folderPathModels = __DIR__ . '/models/';
+    $folderPathRepositories = __DIR__ . '/repositories/';
+    $folderPathControllers = __DIR__ . '/controllers/';
+
+
+    if (file_exists($folderPathModels . $filePathClass)) {
+        require $folderPathModels . $filePathClass;
     }
-    else {
-      throw new Error("The class $class can't be found.");
+
+    if (file_exists($folderPathRepositories . $filePathClass)) {
+        require $folderPathRepositories . $filePathClass;
     }
-  } catch (Error $e) {
-    echo "An error has occurred : " . $e->getMessage();
-  }
+
+    if (file_exists($folderPathControllers . $filePathClass)) {
+        require $folderPathControllers . $filePathClass;
+    }
 }
 
-// The demand :
-spl_autoload_register('ChargerClasses');
+spl_autoload_register('classLoader');

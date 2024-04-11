@@ -1,30 +1,22 @@
 <?php
 
-namespace src\controllers;
-
-use src\services\Reponse;
+require_once __DIR__ . '/../services/Render.php';
 
 class HomeController
 {
 
-  use Reponse;
+  use Render;
 
-  public function index(): void
+  public function homepage()
   {
-    if (isset($_GET['error'])) {
-      $error = htmlspecialchars($_GET['error']);
-    } else {
-      $error = '';
-    }
-
-    $this->render("connection", ["error"=> $error]);
+    $this->render('homepage');
   }
 
   public function auth(string $password): void
   {
     if ($password === 'admin') {
       $_SESSION['connected'] = TRUE;
-      header('location: '.HOME_URL.'connected');
+      header('location: '.HOME_URL.'homepage');
       die();
     } else {
       header('location: '.HOME_URL.'?error=connected');

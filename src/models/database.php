@@ -1,14 +1,26 @@
 <?php
 
-namespace src\models;
+require_once __DIR__ . "/../../config.php";
 
-final class Database {
+class Database
+{
     private $db;
-    private $config;
 
-    public function __construct(){
-        $this->config = __DIR__ ."../../config.php";
-        require_once $this->config;
-        $this->connexionDB();
-      }
+    public function __construct()
+    {
+        try {
+            $this->db = new PDO(
+                'mysql:host=' . DB_HOST . ';dbname=' . DB_NAME . ';charset=utf8',
+                DB_USER,
+                DB_PWD
+            );
+        } catch (Exception $error) {
+            die('Error : ' . $error->getMessage());
+        }
+    }
+
+    public function getDb()
+    {
+        return $this->db;
+    }
 }
