@@ -1,6 +1,6 @@
 <?php
 include __DIR__ . '/includes/navbar.php';
-echo 'homepage';
+
 
 ?>
 <!DOCTYPE html>
@@ -18,7 +18,7 @@ echo 'homepage';
 
 <title>Sign App</title>
   <script>
-    const HOME_URL = "<?= HOME_URL ?>";
+
     </script>
     </head>
     <body>
@@ -29,11 +29,11 @@ echo 'homepage';
       <div class="mb-3 column">
         <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
         <div class="col-sm-7">
-          <input  type="text" class="form-control" id="email" value="teacher@email.com">
+          <input  type="text" class="form-control" id="email" value="sally@smith.com">
         </div>
       </div>
     <div class="mb-3 column">
-      <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+      <label for="inputPassword" class="col-sm-2 col-form-label"value="sally">Password</label>
       <div class="col-sm-7">
         <input type="password" class="form-control" id="inputPassword">
         </div>

@@ -10,8 +10,25 @@ if(connectBtn) {
 function connectUser(event) {
     event.preventDefault();
 
+    
     const inputEmailValue = email.value;
     const inputPasswordValue = password.value;
 
-    const url = ''
+    const url = 'http://briefsignapp/public/teacher';
+
+    connection = {
+        email: inputEmailValue,
+        password: inputPasswordValue,
+    };
+
+    fetch (url, {
+        method: 'POST',
+        headers: {"Content-Type": "application/json",},
+        body: JSON.stringify(connection),
+    }) .then((response) => {
+        return response.text();
+    }) .then((result) => {
+        main.innerHTML = ''
+        main.innerHTML = result
+    });
 }

@@ -9,17 +9,23 @@ require_once __DIR__ . '/../config.php';
 $homeController = new HomeController();
 
 switch ($route) {
-    case HOME_URL . 'homepage':
+    case HOME_URL:
+      $homeController->homepage();
       if ($method == 'GET') {
-        echo ('HOMEPAGE');
         $homeController->homepage();
       } else if ($method == 'POST') {
-        
-        
+      
       }
       break;
+      case HOME_URL .'teacher':
+        if ($method == 'GET') {
+          $homeController->homepage();
+        } else if ($method == 'POST') {
+        $homeController->teacherDashboard();
+        }
+        break;
   
   default:
-    // $homeController->quit();
+    header('404');
     break;
 }
