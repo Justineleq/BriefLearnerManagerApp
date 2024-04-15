@@ -22,6 +22,7 @@ include __DIR__ . '/includes/navbar.php';
     </script>
     </head>
     <body>
+      
 <div id="mainContainer">
   <form>
     <div class="container m-20" style="background-color: #f8f9fa;">
@@ -43,4 +44,5 @@ include __DIR__ . '/includes/navbar.php';
     </div>
 </div>
     <script src="/public/assets/connection.js"></script>
+</div>
 </body>

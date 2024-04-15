@@ -1,5 +1,7 @@
 <?php
 
+namespace src\Services;
+
 trait Render {
 
   public function render(string $view, array $data = null)

@@ -2,8 +2,7 @@
 echo 'teacher page';
 ?>
 
-
-
+<div id='teacherDashboard'>
 <ul class="nav nav-tabs">
   <li class="nav-item">
     <a class="nav-link active" aria-current="page" href="#">Home</a>
@@ -15,3 +14,4 @@ echo 'teacher page';
     <a class="nav-link" href="#">Users</a>
   </li>
 </ul>
+</div>

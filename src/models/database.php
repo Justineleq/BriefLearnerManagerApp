@@ -1,4 +1,8 @@
 <?php
+namespace src\Models;
+
+use Exception;
+use PDO;
 
 require_once __DIR__ . "/../../config.php";
 

@@ -1,26 +1,26 @@
 <?php
 
-function classLoader($className)
+function classLoader($class)
 {
-    $filePathClass = $className . '.php';
-
-
-    $folderPathModels = __DIR__ . '/models/';
-    $folderPathRepositories = __DIR__ . '/repositories/';
-    $folderPathControllers = __DIR__ . '/controllers/';
-
-
-    if (file_exists($folderPathModels . $filePathClass)) {
-        require $folderPathModels . $filePathClass;
+try {
+    if(str_contains($class, 'src')) {
+        $class = str_replace('src','',$class);
+        $class = str_replace('\\','/',$class);
+        require_once __DIR__ . $class . '.php';
     }
 
-    if (file_exists($folderPathRepositories . $filePathClass)) {
-        require $folderPathRepositories . $filePathClass;
+    else {
+        throw new Error("The class $class ca not be found");
     }
+} catch (Error $e) {
+    echo "Error : " . $e->getMessage();
+}
+    
 
-    if (file_exists($folderPathControllers . $filePathClass)) {
-        require $folderPathControllers . $filePathClass;
-    }
+
+
+
+
 }
 
 spl_autoload_register('classLoader');

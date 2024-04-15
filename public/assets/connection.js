@@ -14,7 +14,7 @@ function connectUser(event) {
     const inputEmailValue = email.value;
     const inputPasswordValue = password.value;
 
-    const url = 'http://briefsignapp/public/teacher';
+    const url = 'http://briefsignapp/public/';
 
     connection = {
         email: inputEmailValue,
@@ -28,7 +28,8 @@ function connectUser(event) {
     }) .then((response) => {
         return response.text();
     }) .then((result) => {
+        console.log(result)
         main.innerHTML = ''
         main.innerHTML = result
-    });
+    }).catch(console.error());
 }

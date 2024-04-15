@@ -1,6 +1,8 @@
 <?php
 
+namespace src\Repositories;
 
+use src\Models\Database;
 
 class UserRepo extends Database{
 
@@ -21,7 +23,11 @@ class UserRepo extends Database{
 
         $request->execute(['email' => $email]);
 
-        return $request->fetchAll();
+        return $request->fetch();
 
     }
+
+
+
+
 }
