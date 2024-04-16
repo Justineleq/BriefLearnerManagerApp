@@ -1,11 +1,11 @@
 <?php
 
-use src\Controllers\HomeController;
+use src\controllers\HomeController;
 
 $route = $_SERVER['REQUEST_URI'];
 $method = $_SERVER['REQUEST_METHOD'];
 
-// require __DIR__ . '/controllers/homeController.php';
+
 require_once __DIR__ . '/../config.php';
 
 $homeController = new HomeController;
@@ -23,7 +23,7 @@ switch ($route) {
         if ($method == 'GET') {
           $homeController->homepage();
         } else if ($method == 'POST') {
-        // $homeController->teacherDashboard();
+        $homeController->teacherDashboard();
         }
         break;
   

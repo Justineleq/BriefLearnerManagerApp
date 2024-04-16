@@ -1,6 +1,6 @@
 <?php
 
-namespace src\Services;
+namespace src\services;
 
 trait Hydratation
 {

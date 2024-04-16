@@ -1,8 +1,8 @@
 <?php
 
-namespace src\Repositories;
+namespace src\repositories;
 
-use src\Models\Database;
+use src\models\Database;
 
 class UserRepo extends Database{
 

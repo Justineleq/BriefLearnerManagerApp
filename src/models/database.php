@@ -1,5 +1,5 @@
 <?php
-namespace src\Models;
+namespace src\models;
 
 use Exception;
 use PDO;

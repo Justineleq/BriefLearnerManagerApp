@@ -10,17 +10,11 @@ try {
     }
 
     else {
-        throw new Error("The class $class ca not be found");
+        throw new Error("The class $class cannot be found");
     }
 } catch (Error $e) {
     echo "Error : " . $e->getMessage();
 }
-    
-
-
-
-
-
 }
 
 spl_autoload_register('classLoader');
