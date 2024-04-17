@@ -1,7 +1,6 @@
 <?php
  namespace src\controllers;
 
-use Database;
 use src\repositories\UserRepo;
 use src\services\Render;
 
@@ -15,9 +14,6 @@ class HomeController
     $this->render('homepage');
   }
 
-  
-
- 
   public function teacherDashboard() {
    
    if(!empty(file_get_contents('php://input'))) {
@@ -35,7 +31,7 @@ class HomeController
             if (password_verify($password, $user['Password'])){
               // The passwords match 
               json_encode(["status" => "succes", "message" => "We succeded", "infoUser" => $user ]);
-              include_once __DIR__. '/../views/teacher.php';
+              include_once __DIR__. '/../views/teacherDashboard.php';
             } else {
               // Passwords does not match
               json_encode(["status" => "error", "message" => "password does not match"]);

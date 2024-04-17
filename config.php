@@ -8,7 +8,7 @@
       define('DB_PWD', 'BriefSignApp');
       define('PREFIX', 'SIGNAPP_');
       
-      // If the domain name does not point to the public folder, enter the path between the domain name and the public folder.
-      // example: /my-site/public/
+
       define('HOME_URL', '/');
+ 
       
