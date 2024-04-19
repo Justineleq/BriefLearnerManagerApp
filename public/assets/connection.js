@@ -6,7 +6,7 @@ const connectBtn = document.getElementById('connectBtn');
 
 if(connectBtn) {
     connectBtn.addEventListener("click", connectUser);
-    document.getElementById("connectStatus").innerHTML = "Disconnect"
+    
     console.log('connect button');
 }
 
@@ -42,7 +42,7 @@ function connectUser(event) {
               // 4. On enlève l'ancienne balise script et on ajoute la nouvelle :
               main.removeChild(scripts[i]);
               main.appendChild(script);
-            
+              
           }
         })
 

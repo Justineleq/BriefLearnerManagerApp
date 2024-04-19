@@ -1,5 +1,6 @@
 const codeBtn = document.getElementById('codeBtnMorning');
 const codeResult = document.getElementById('displayCode');
+document.getElementById("connectStatus").innerHTML = "Disconnect"
 
 codeBtn.addEventListener("click", function() {
 
@@ -41,11 +42,7 @@ codeBtn.addEventListener("click", function() {
         };
     });
 
-const clickedTabs = document.querySelectorAll('nav-link');
 
-clickedTabs.addEventListener("DOMContentLoaded", function() {
-    if()
-})
 
     
 
