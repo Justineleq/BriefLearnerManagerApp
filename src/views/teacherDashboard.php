@@ -5,10 +5,10 @@
 <div id='teacherDashboard1st'>
 <ul class="nav nav-tabs">
   <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="#">Home</a>
+    <a id= 'tabHome' class="nav-link active" aria-current="page" href="#">Home</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#" id="classList">Classes</a>
+    <a id= 'tabClass'class="nav-link" href="#" id="classList">Classes</a>
   </li>
 </ul>
 </div>
@@ -16,6 +16,7 @@
 <div><br>
   <h5>Todays Classes</h5>
 </div><br>
+
 
 <div id="morningCard"class="card w-75 p-3">
   <div class="card-body d-flex justify-content-between background-color: #f8f9fa;">
@@ -46,5 +47,11 @@
 </div>
 </div>
 <script src="/assets/teacherDashboard.js" defer></script>
+
+<!-- class tab -->
+<div id='classTabContent'>
+<?php echo 'class tab stuff' ?>
+</div>
+
 
 </body>

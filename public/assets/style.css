@@ -3,5 +3,7 @@
     padding: 5%;
 }
 
-
+#classTabContent {
+    visibility: hidden;
+}
 

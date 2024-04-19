@@ -41,5 +41,13 @@ codeBtn.addEventListener("click", function() {
         };
     });
 
+const clickedTabs = document.querySelectorAll('nav-link');
+
+clickedTabs.addEventListener("DOMContentLoaded", function() {
+    if()
+})
+
+    
+
 
 
