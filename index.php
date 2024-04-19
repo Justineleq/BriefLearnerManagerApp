@@ -1,5 +1,6 @@
 <?php
-require __DIR__ . "/../src/init.php";
+echo "Inaccessible to the public";
 
+header('location: public/');
 
 
