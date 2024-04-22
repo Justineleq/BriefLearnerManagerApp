@@ -1,4 +1,4 @@
-Getting Started...
+**Getting Started...**
 
 Bash =
 
@@ -8,8 +8,10 @@ ssh =
 
 git clone git@github.com:Justineleq/BriefSignApp.git
 
-Improvements tyo make...
+**Improvements I still want to make...**
 
 To make the whole thing work =
 
-Creating Fetch/Ajax 
+Creating Fetch/Ajax for all database entries
+
+Finishing all frontend
